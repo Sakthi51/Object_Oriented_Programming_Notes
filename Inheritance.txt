@@ -1,0 +1,33 @@
+class Info():
+    def __init__(self, name, age, locality):
+        self.name = name
+        self.age  = age
+        self.locality = locality
+
+    def printinfo(self):
+        print(f"I am {self.name} and I am {self.age}. I am from {self.locality}")
+
+p1 = Info("Sakthi", 20, "chennai")
+p2 = Info("Vijay", 20, "madurai")
+p3 = Info("rithwik", 20, "trichy")
+p1.printinfo()
+p2.printinfo()
+p3.printinfo()
+
+print("_____________________________________________________________")
+
+class employee(Info):
+    def __init__(self, name, age, locality, salary, position):
+        Info.__init__(self, name, age, locality)
+        self.emloyee_salary = salary
+        self.employee_position = position
+
+    def printemployeeinfo(self):
+        print(f"I am {self.name} and I am {self.age}. I am from {self.locality}. My salary is {self.emloyee_salary}. My position is {self.employee_position}")
+
+e1 = employee("Sakthi", 20, "chennai", 1000, "SE")
+e2 = employee("Vijay", 20, "madurai", 2000, "D")
+e3 = employee("rithwik", 20, "trichy", 3000, "C")
+e1.printemployeeinfo()
+e2.printemployeeinfo()
+e3.printemployeeinfo()

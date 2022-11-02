@@ -1,0 +1,41 @@
+class person():
+    def __init__(self, name, age, gender, locality, experience):
+        self.name = name
+        self.age = age
+        self.gender = gender
+        self.locality = locality
+        self.experience = experience
+
+    def person_details(self):
+        print(f"I am {self.name}.")
+        print(f"I am {self.age} years old.")
+        print(f"I am a {self.gender}.")
+        print(f"I am from {self.locality}.")
+        print(f"I have experience of  {self.experience} years.")
+
+    def mistakes(self):
+        return 'leaves! you with warning'
+
+class employee(person):
+    def __init__(self, name, age, gender, locality, experience ):
+        super().__init__(name, age, gender, locality, experience)
+
+    def mistakes(self):
+        return 'leaves! you with warning'
+
+class teacher(person):
+    def __init__(self, name, age, gender, locality, experience):
+        super().__init__(name, age, gender, locality, experience)
+
+    def mistakes(self):
+        return 'Scolds!!! like crazy man'
+
+p1 = person("sakthi", 20, "male", "chennai", 5)
+p1.person_details()
+print("______________")
+
+t1 = teacher("goms", 20, "female", "chennai", 10)
+t1.person_details()
+print(p1.name, p1.experience)
+print(t1.mistakes())
+
